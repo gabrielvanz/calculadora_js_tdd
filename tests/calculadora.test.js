@@ -22,6 +22,10 @@ describe('Calculadora - Operação de Soma', () => {
     expect(calculadora.somar(1.5, 2.3)).toBeCloseTo(3.8);
   });
 
+  test('deve somar números grandes', () => {
+    expect(calculadora.somar(1000000, 2500000)).toBe(3500000);
+  });
+
   test('deve retornar erro ao tentar somar com valor não numérico', () => {
     expect(() => calculadora.somar('a', 2)).toThrow('Valores devem ser números');
   });
