@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <div class="calculadora">
+            <input type="number" v-model="numero1" placeholder="Número 1">
+            <input type="number" v-model="numero2" placeholder="Número 2">
+            
+            <div class="botoes">
+                <button @click="calcular('somar')">+</button>
+                <button @click="calcular('subtrair')">-</button>
+                <button @click="calcular('multiplicar')">×</button>
+                <button @click="calcular('dividir')">÷</button>
+            </div>
+            
+            <div class="resultado">
+                <strong>Resultado:</strong> <span>{{ resultado }}</span>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="js/calculadora.js"></script>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
